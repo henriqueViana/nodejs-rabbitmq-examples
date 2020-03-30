@@ -1,4 +1,4 @@
-# RabbitMQ with NodeJS examples &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
+# RabbitMQ with NodeJS examples &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 These examples cover the most common implementation models with RabbitMQ.
 
@@ -24,7 +24,7 @@ git clone https://github.com/henriqueViana/nodejs-rabbitmq-examples.git
 ```sh
 npm i -S amqplib
 
-#### *OR*
+OR
 
 yarn add amqplib
 ```
@@ -44,4 +44,19 @@ node src/workers/callback/worker.js
 ```sh
 node src/workers/promise/publisher.js
 node src/workers/promise/worker.js
+```
+
+### Publish / Subscribe
+
+*Callback Example*:
+```sh
+node src/pubsub/callback/publisher.js
+node src/pubsub/callback/worker.js
+```
+
+
+*Promise Example*:
+```sh
+node src/pubsub/promise/publisher.js
+node src/pubsub/promise/worker.js
 ```
