@@ -1,5 +1,7 @@
+require('dotenv').config()
+
 const amqp = require('amqplib/callback_api')
-const url = 'amqp://localhost'
+const url = process.env.RABBITMQ_URL || 'amqp://localhost'
 
 amqp.connect(url, (err, conn) => {
   if (err) {
@@ -9,8 +11,8 @@ amqp.connect(url, (err, conn) => {
   conn.createChannel((err, channel) => {
     const queueName = 'queueUser'
     const message = {
-      'name': 'Henrique',
-      'email': 'henriquehvisa@gmail.com'
+      'name': 'User',
+      'email': 'user@gmail.com'
     }
 
     channel.assertQueue(queueName, { durable: true })

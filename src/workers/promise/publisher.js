@@ -23,7 +23,7 @@ const init = async () => {
   channel.assertQueue(queue, { durable: true })
   channel.sendToQueue(queue, Buffer.from(message))
 
-  console.log('publisher is working motherfucker')
+  console.log('publisher is working')
 
   closeConnectionQueue(conn)
 }
