@@ -23,11 +23,9 @@ git clone https://github.com/henriqueViana/nodejs-rabbitmq-examples.git
 
 ```sh
 npm i -S amqplib
-```
 
 #### *OR*
 
-```sh
 yarn add amqplib
 ```
 
@@ -36,9 +34,14 @@ yarn add amqplib
 ### Workers
 
 *Callback Example*:
-  node src/workers/callback/publisher.js
-  node src/workers/callback/worker.js
+```sh
+node src/workers/callback/publisher.js
+node src/workers/callback/worker.js
+```
+
 
 *Promise Example*:
-  node src/workers/promise/publisher.js
-  node src/workers/promise/worker.js
+```sh
+node src/workers/promise/publisher.js
+node src/workers/promise/worker.js
+```
